@@ -5,7 +5,7 @@ const middleware = require('../middleware')
 router.get('/:topicId', controller.getComments)
 router.post('/:topicId/:userId', controller.addComment)
 router.delete(
-  '/:topicId/:commentId',
+  '/:commentId',
   middleware.stripToken,
   middleware.verifyToken,
   controller.deleteComment
