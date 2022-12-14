@@ -23,11 +23,6 @@ router.delete(
 
 router.post('/:userId', controller.CreateTracker)
 
-router.put(
-  '/:trackerId',
-  middleware.stripToken,
-  middleware.verifyToken,
-  controller.UpdateTracker
-)
+router.put('/:trackerId', controller.UpdateTracker)
 
 module.exports = router
